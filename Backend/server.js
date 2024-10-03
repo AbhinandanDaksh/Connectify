@@ -1,12 +1,19 @@
 // const express = require('express')// method-1
-import express from "express"; // method-2
-import dotenv from "dotenv"; 
-import connectDB from "./config/database.js";
-import userRoute from "./routes/userRoute.js";
-import messageRoute from "./routes/messageRoute.js";
-import cookieParser from "cookie-parser";
-import cors from "cors";
-import { app,server } from "./socket/socket.js";
+const express=require("express")
+const dotenv=require("dotenv")
+const cors=require("cors")
+const database=require("./config/database.js")
+const userRoute=require("./routes/userRoute.js")
+const { app,server }=require("./socket/socket.js")
+const messageRoute=require("./routes/messageRoute.js")
+const cookieParser=require("cookie-parser")
+// import dotenv from "dotenv"; 
+// import connectDB from "./config/database.js";
+// import userRoute from "./routes/userRoute.js";
+// import messageRoute from "./routes/messageRoute.js";
+// import cookieParser from "cookie-parser";
+// import cors from "cors";
+// import { app,server } from "./socket/socket.js";
 dotenv.config({});
 
  
@@ -29,7 +36,7 @@ app.use("/api/v1/message",messageRoute);
  
 
 server.listen(PORT, ()=>{
-    connectDB();
-    console.log(`Server listen at prot ${PORT}`);
+    database();
+    console.log(`Server listen at port ${PORT}`);
 });
 
