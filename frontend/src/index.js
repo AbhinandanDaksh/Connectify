@@ -10,7 +10,7 @@ import { persistStore } from 'redux-persist';
 
 let persistor = persistStore(store);
 
-export const BASE_URL="https://connectify-backend-72p4.onrender.com/"
+export const BASE_URL="https://connectify-backend-72p4.onrender.com"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
