@@ -16,7 +16,6 @@ const cookieParser=require("cookie-parser")
 // import { app,server } from "./socket/socket.js";
 dotenv.config({});
 
- 
 const PORT = process.env.PORT || 5000;
 
 // middleware
@@ -33,7 +32,6 @@ app.use(cors(corsOption));
 // routes
 app.use("/api/v1/user",userRoute); 
 app.use("/api/v1/message",messageRoute);
- 
 
 server.listen(PORT, ()=>{
     database();
