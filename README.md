@@ -37,11 +37,11 @@ To run this project locally, follow these steps:
    ```bash
    cd connectify
    
-3. **Install dependencies:**
+3. **Install dependencies both frontend and backend:**
     ```bash
    npm install
     
-4. **Set up environment variables:**
+4. **Set up environment variables in backend:**
    ```bash
    MONGODB_URI=your_mongodb_connection_string
    JWT_SECRET=your_jwt_secret
